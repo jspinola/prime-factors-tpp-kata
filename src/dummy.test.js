@@ -1,4 +1,4 @@
-const dummy = require('./dummy')
+import dummy from './dummy'
 
 describe('dummy', () => {
   it('returns true', () => {
