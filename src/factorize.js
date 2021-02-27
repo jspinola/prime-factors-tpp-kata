@@ -1,7 +1,13 @@
-module.exports = (number) => {
+
+const factorize = (number) => {
   if (number < 4) {
     return [number]
   }
 
-  return [2,2]
+  const result = factorize(number / 2)
+  result.unshift(2)
+  
+  return result;
 }
+
+module.exports = factorize

@@ -12,4 +12,8 @@ describe('factorize should', () => {
   it('return factor of 4', () => {
     expect(factorize(4)).toEqual([2, 2])
   })
+
+  it('return factor of 6', () => {
+    expect(factorize(6)).toEqual([2, 3])
+  })
 })
