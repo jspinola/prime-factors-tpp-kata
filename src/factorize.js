@@ -6,16 +6,19 @@ const factorize = (number) => {
     return [number]
   }
 
-  let divider;
-  if (number % primeNumbers[0] === 0) {
-    divider = primeNumbers[0]
+  let i = 0
+  while (i < primeNumbers.length - 1
+    && number % primeNumbers[i] !== 0) {
+    i++
+  }
+  if (i >= primeNumbers.length) {
+    return []
   }
 
-  if (number % primeNumbers[1] === 0) {
-    divider = primeNumbers[1]
-  }
+  const divider = primeNumbers[i]
+
   const result = factorize(number / divider)
-  result.push(divider)
+  result.unshift(divider)
   
   return result;
 }
