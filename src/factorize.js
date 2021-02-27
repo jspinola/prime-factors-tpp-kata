@@ -1,3 +1,3 @@
 module.exports = (number) => {
-  return [2]
+  return [number]
 }
