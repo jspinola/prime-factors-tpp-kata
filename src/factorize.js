@@ -11,9 +11,6 @@ const factorize = (number) => {
     && number % primeNumbers[i] !== 0) {
     i++
   }
-  if (i >= primeNumbers.length) {
-    return []
-  }
 
   const divider = primeNumbers[i]
 
