@@ -4,8 +4,16 @@ const factorize = (number) => {
     return [number]
   }
 
-  const result = factorize(number / 2)
-  result.unshift(2)
+  let divider;
+  if (number % 2 === 0) {
+    divider = 2
+  }
+
+  if (number % 3 === 0) {
+    divider = 3
+  }
+  const result = factorize(number / divider)
+  result.push(divider)
   
   return result;
 }
