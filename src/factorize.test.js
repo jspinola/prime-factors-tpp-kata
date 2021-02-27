@@ -1,5 +1,3 @@
-// 12 -> 2,2,3
-// 15 -> 3, 5
 const factorize = require('./factorize')
 
 describe('factorize should', () => {
@@ -9,7 +7,8 @@ describe('factorize should', () => {
     [4, [2,2]],
     [6, [2,3]],
     [9, [3,3]],
-    [12, [2,2,3]]
+    [12, [2,2,3]],
+    [15, [3,5]]
   ])
   ('return factor of %i', (number, expectedResult) => {
     expect(factorize(number)).toEqual(expectedResult)
