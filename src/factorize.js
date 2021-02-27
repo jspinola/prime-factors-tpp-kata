@@ -6,13 +6,7 @@ const factorize = (number) => {
     return [number]
   }
 
-  let i = 0
-  while (i < primeNumbers.length - 1
-    && number % primeNumbers[i] !== 0) {
-    i++
-  }
-
-  const divider = primeNumbers[i]
+  const divider = getFirstDivisiblePrime(number)
 
   const result = factorize(number / divider)
   result.unshift(divider)
@@ -21,3 +15,13 @@ const factorize = (number) => {
 }
 
 module.exports = factorize
+
+const getFirstDivisiblePrime = (number) => {
+  let i = 0
+  while (i < primeNumbers.length - 1
+    && number % primeNumbers[i] !== 0) {
+    i++
+  }
+
+  return primeNumbers[i]
+}
