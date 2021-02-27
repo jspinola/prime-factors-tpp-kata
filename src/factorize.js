@@ -1,5 +1,5 @@
 
-const primeNumbers = [2, 3, 5]
+const primeNumbers = [2, 3, 5, 7]
 
 const factorize = (number) => {
   if (primeNumbers.includes(number)) {
