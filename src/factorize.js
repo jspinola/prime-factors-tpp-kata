@@ -1,3 +1,3 @@
-module.exports = () => {
-  return true
+module.exports = (number) => {
+  return [2]
 }
